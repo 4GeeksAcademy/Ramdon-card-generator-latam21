@@ -1,1 +1,11 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+body {
+  background: darkgreen;
+}
+
+.Card-container {
+  background: white;
+  height: 670px;
+  width: 470px;
+  border-radius: 15px;
+}
