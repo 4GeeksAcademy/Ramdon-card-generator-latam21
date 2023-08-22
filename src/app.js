@@ -7,10 +7,13 @@ import "./assets/img/4geeks.ico";
 
 window.onload = function() {
   let cardTypes = [
-    "fa-gem",
-    "fa-wine-glass-alt",
-    "fa-window-minimize",
-    "fa-tree"
+    "♦",
+    "♥",
+    "♠",
+    "♣"
+    //"fa-wine-glass-alt",
+    // "fa-window-minimize",
+    // "fa-tree"
   ];
 
   let numbers = [
@@ -39,15 +42,25 @@ window.onload = function() {
   let numbersPosition = numbers[Ramdonposition(numbers)];
   console.log(numbersPosition);
 
-  let selectedIcon = document.getElementById("iconLeftTopCorner");
+  let randomIcon = cardTypes[Ramdonposition(cardTypes)];
+
+  let selectedIcon = document.querySelector(".Top-icon");
+  selectedIcon.innerHTML = randomIcon;
 
   selectedIcon.classList.add(cardPosition);
 
-  let selectedIcon2 = document.getElementById("iconLowerRightCorner");
+  let selectedIcon2 = document.querySelector(".Bottom-icon");
+  selectedIcon2.innerHTML = randomIcon;
 
   selectedIcon2.classList.add(cardPosition);
 
   let selectNumber = document.getElementById("number");
+
+  if (randomIcon == "♥" || randomIcon == "♦") {
+    selectedIcon.style.color = "red";
+    selectedIcon2.style.color = "red";
+    selectNumber.style.color = "red";
+  }
 
   selectNumber.innerHTML = numbersPosition;
 };
