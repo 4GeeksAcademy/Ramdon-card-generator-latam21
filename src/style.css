@@ -4,8 +4,29 @@ body {
 }
 
 .Card-container {
+  display: flex;
   background: white;
   height: 670px;
   width: 470px;
   border-radius: 15px;
+}
+
+.Top-icon {
+  font-size: 5vh;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+
+#number {
+  font-size: 5vh;
+  margin-block: auto;
+  margin-inline-start: auto;
+}
+
+.Bottom-icon {
+  font-size: 5vh;
+  margin-left: auto;
+  margin-block-start: auto;
+  padding-right: 20px;
+  padding-bottom: 10px;
 }
